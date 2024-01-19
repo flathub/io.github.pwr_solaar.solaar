@@ -59,8 +59,8 @@ modules:
         --prefix=${FLATPAK_DEST} "psutil>=5.4.3" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/d6/0f/96b7309212a926c1448366e9ce69b081ea79d63265bde33f11cc9cfc2c07/psutil-5.9.5.tar.gz
-        sha256: 5410638e4df39c54d957fc51ce03048acd8e6d60abc0f5107af51e5fb566eb3c
+        url: https://files.pythonhosted.org/packages/90/c7/6dc0a455d111f68ee43f27793971cf03fe29b6ef972042549db29eec39a2/psutil-5.9.8.tar.gz
+        sha256: 6be126e3225486dff286a8fb9a06246a5253f4c7c53b475ea5f5ac934e64194c
         x-checker-data:
           name: psutil
           type: pypi
