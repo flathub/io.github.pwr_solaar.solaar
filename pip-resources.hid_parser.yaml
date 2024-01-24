@@ -1,0 +1,14 @@
+# Generated with flatpak-pip-generator --checker-data --yaml --runtime=org.gnome.Sdk//45 hid_parser -o pip-resources.hid_parser
+name: python3-hid_parser
+buildsystem: simple
+build-commands:
+  - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+    --prefix=${FLATPAK_DEST} "hid_parser" --no-build-isolation
+sources:
+  - type: file
+    url: https://files.pythonhosted.org/packages/5a/85/09466ddd8762c3e792878543277db1c09e481a57c33d6b835ec4d6e4487b/hid_parser-0.0.3-py3-none-any.whl
+    sha256: abbb6323728fef5e2f65b8d91960cf1b8ede2545f92fe319417470997d6e6819
+    x-checker-data:
+      name: hid_parser
+      packagetype: bdist_wheel
+      type: pypi

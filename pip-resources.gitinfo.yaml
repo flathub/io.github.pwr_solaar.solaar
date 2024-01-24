@@ -1,0 +1,14 @@
+# Generated with flatpak-pip-generator --checker-data --yaml --runtime=org.gnome.Sdk//45 gitinfo -o pip-resources.gitinfo
+name: python3-gitinfo
+buildsystem: simple
+build-commands:
+  - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+    --prefix=${FLATPAK_DEST} "gitinfo" --no-build-isolation
+sources:
+  - type: file
+    url: https://files.pythonhosted.org/packages/4d/2b/920b91f1e45f6fe5b3d37ca020dba365affabb111763d8757e75e9a61fd6/gitinfo-1.2.0-py3-none-any.whl
+    sha256: aecf839aa9cd0ebb5e70a9e3feecb1e7f859d4caf0093602b3596f036fee7481
+    x-checker-data:
+      name: gitinfo
+      packagetype: bdist_wheel
+      type: pypi

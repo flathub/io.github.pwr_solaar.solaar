@@ -1,6 +1,6 @@
 app-id: io.github.pwr_solaar.solaar
 runtime: org.gnome.Platform
-runtime-version: '45'
+runtime-version: "45"
 sdk: org.gnome.Sdk
 command: solaar
 rename-icon: solaar
@@ -11,20 +11,95 @@ finish-args:
   - --socket=wayland
   - --socket=fallback-x11
   - --talk-name=org.gtk.vfs.*
+  - --talk-name=org.kde.StatusNotifierWatcher
   - --filesystem=xdg-run/gvfsd
 
 modules:
+  - name: libayatana-appindicator
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DENABLE_BINDINGS_MONO=NO
+      - -DENABLE_BINDINGS_VALA=NO
+      - -DENABLE_GTKDOC=NO
+    modules:
+      - shared-modules/intltool/intltool-0.51.json
+      - name: libdbusmenu-gtk3
+        buildsystem: autotools
+        build-options:
+          cflags: -Wno-error
+          env:
+            HAVE_VALGRIND_FALSE: "#"
+            HAVE_VALGRIND_TRUE: ""
+        config-opts:
+          - --with-gtk=3
+          - --disable-dumper
+          - --disable-static
+          - --disable-tests
+          - --disable-gtk-doc
+          - --enable-introspection=no
+          - --disable-vala
+        sources:
+          - type: archive
+            url: https://launchpad.net/libdbusmenu/16.04/16.04.0/+download/libdbusmenu-16.04.0.tar.gz
+            sha256: b9cc4a2acd74509435892823607d966d424bd9ad5d0b00938f27240a1bfa878a
+        cleanup:
+          - /include
+          - /libexec
+          - /lib/pkgconfig
+          - /lib/*.la
+          - /share/doc
+          - /share/libdbusmenu
+          - /share/gtk-doc
+          - /share/gir-1.0
+      - name: ayatana-ido
+        buildsystem: cmake-ninja
+        sources:
+          - type: git
+            url: https://github.com/AyatanaIndicators/ayatana-ido.git
+            tag: 0.10.1
+            commit: 13402a2cc4616b4b5f4244413599e635fcfc1401
+            x-checker-data:
+              type: git
+              tag-pattern: ^([\d.]+)$
+          - type: shell
+            //: Remove unused Vala/GIR files
+            commands:
+              - sed -i 's/Vala REQUIRED/Vala /' src/CMakeLists.txt
+              - sed -i '/install.*AyatanaIdo3-0.4.*/d' src/CMakeLists.txt
+      - name: libayatana-indicator
+        buildsystem: cmake-ninja
+        sources:
+          - type: git
+            url: https://github.com/AyatanaIndicators/libayatana-indicator.git
+            tag: 0.9.4
+            commit: 611bb384b73fa6311777ba4c41381a06f5b99dad
+            x-checker-data:
+              type: git
+              tag-pattern: ^([\d.]+)$
+    sources:
+      - type: git
+        url: https://github.com/AyatanaIndicators/libayatana-appindicator.git
+        tag: 0.5.93
+        commit: 238c8b02718fa5b4af95ede72beeed762094f4cc
+        x-checker-data:
+          type: git
+          tag-pattern: ^([\d.]+)$
+
   - python3-modules.yaml
+  - pip-resources.hid_parser.yaml
+  - pip-resources.gitinfo.yaml
+
   - name: solaar
     cleanup:
       - /lib/pkgconfig
     buildsystem: simple
     build-commands:
       - python3 setup.py install --prefix=/app --root=/
+
     sources:
       - type: git
         url: https://github.com/pwr-Solaar/Solaar.git
-        tag: '1.1.10'
+        tag: "1.1.10"
         commit: 09938ebd05e0eb4d31ec870032d9288ed330d33f
         x-checker-data:
           type: anitya
