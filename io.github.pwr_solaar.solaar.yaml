@@ -1,6 +1,6 @@
 app-id: io.github.pwr_solaar.solaar
 runtime: org.gnome.Platform
-runtime-version: "45"
+runtime-version: '45'
 sdk: org.gnome.Sdk
 command: solaar
 rename-icon: solaar
@@ -28,8 +28,8 @@ modules:
         build-options:
           cflags: -Wno-error
           env:
-            HAVE_VALGRIND_FALSE: "#"
-            HAVE_VALGRIND_TRUE: ""
+            HAVE_VALGRIND_FALSE: '#'
+            HAVE_VALGRIND_TRUE: ''
         config-opts:
           - --with-gtk=3
           - --disable-dumper
@@ -99,8 +99,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/pwr-Solaar/Solaar.git
-        tag: "1.1.10"
-        commit: 09938ebd05e0eb4d31ec870032d9288ed330d33f
+        tag: 1.1.11
+        commit: 47f94a6a796e773de63291c99744ca22d8c9f233
         x-checker-data:
           type: anitya
           project-id: 11338
