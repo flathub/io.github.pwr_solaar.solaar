@@ -9,8 +9,8 @@ modules:
         --prefix=${FLATPAK_DEST} "evdev>=1.1.2" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/f3/0c/c87b141250a650ee53d4e9957e905b17c144cda6dc4187cbe89a641a1b34/evdev-1.7.0.tar.gz
-        sha256: 95bd2a1e0c6ce2cd7a2ecc6e6cd9736ff794b3ad5cb54d81d8cbc2e414d0b870
+        url: https://files.pythonhosted.org/packages/12/bb/f622a8a5e64d46ca83020a761877c0ead19140903c9aaf1431f3c531fdf6/evdev-1.7.1.tar.gz
+        sha256: 0c72c370bda29d857e188d931019c32651a9c1ea977c08c8d939b1ced1637fde
         x-checker-data:
           name: evdev
           type: pypi
