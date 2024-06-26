@@ -59,8 +59,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/AyatanaIndicators/ayatana-ido.git
-            tag: 0.10.1
-            commit: 13402a2cc4616b4b5f4244413599e635fcfc1401
+            tag: 0.10.2
+            commit: 2bb2f321c64b903b6e4b5c581d79602632c851c5
             x-checker-data:
               type: git
               tag-pattern: ^([\d.]+)$
