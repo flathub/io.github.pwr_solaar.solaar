@@ -59,8 +59,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/AyatanaIndicators/ayatana-ido.git
-            tag: 0.10.1
-            commit: 13402a2cc4616b4b5f4244413599e635fcfc1401
+            tag: 0.10.4
+            commit: f968079b09e2310fefc3fc307359025f1c74b3eb
             x-checker-data:
               type: git
               tag-pattern: ^([\d.]+)$
@@ -102,8 +102,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/pwr-Solaar/Solaar.git
-        tag: 1.1.11
-        commit: 47f94a6a796e773de63291c99744ca22d8c9f233
+        tag: 1.1.13
+        commit: ea77335ecff4ae51c41b371aa93f5f73c8b37cb5
         x-checker-data:
           type: anitya
           project-id: 11338
