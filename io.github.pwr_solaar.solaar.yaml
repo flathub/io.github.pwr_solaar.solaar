@@ -16,7 +16,15 @@ finish-args:
   # --restart-on-wake-up support (https://github.com/flathub/io.github.pwr_solaar.solaar/issues/7)
   - --system-talk-name=org.freedesktop.UPower
   - --system-talk-name=org.freedesktop.login1
-
+cleanup:
+  - /include
+  - /libexec
+  - /lib/pkgconfig
+  - /lib/*.la
+  - /share/doc
+  - /share/libdbusmenu
+  - /share/gtk-doc
+  - /share/gir-1.0
 modules:
   - name: libayatana-appindicator
     buildsystem: cmake-ninja
@@ -45,15 +53,6 @@ modules:
           - type: archive
             url: https://launchpad.net/libdbusmenu/16.04/16.04.0/+download/libdbusmenu-16.04.0.tar.gz
             sha256: b9cc4a2acd74509435892823607d966d424bd9ad5d0b00938f27240a1bfa878a
-        cleanup:
-          - /include
-          - /libexec
-          - /lib/pkgconfig
-          - /lib/*.la
-          - /share/doc
-          - /share/libdbusmenu
-          - /share/gtk-doc
-          - /share/gir-1.0
       - name: ayatana-ido
         buildsystem: cmake-ninja
         sources:
@@ -93,8 +92,6 @@ modules:
   - pip-resources.gitinfo.yaml
 
   - name: solaar
-    cleanup:
-      - /lib/pkgconfig
     buildsystem: simple
     build-commands:
       - python3 setup.py install --prefix=/app --root=/
