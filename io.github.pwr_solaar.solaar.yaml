@@ -108,3 +108,5 @@ modules:
           type: anitya
           project-id: 11338
           tag-template: $version
+      - type: patch
+        path: fix-appdata.patch
