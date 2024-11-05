@@ -95,7 +95,6 @@ modules:
     buildsystem: simple
     build-commands:
       - python3 setup.py install --prefix=/app --root=/
-
     sources:
       - type: git
         url: https://github.com/pwr-Solaar/Solaar.git
@@ -107,3 +106,5 @@ modules:
           tag-template: $version
       - type: patch
         path: fix-appdata.patch
+      - type: patch
+        path: fix-icon.patch
