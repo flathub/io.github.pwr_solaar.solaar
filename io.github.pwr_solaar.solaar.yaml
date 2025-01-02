@@ -98,8 +98,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/pwr-Solaar/Solaar.git
-        tag: 1.1.13
-        commit: ea77335ecff4ae51c41b371aa93f5f73c8b37cb5
+        tag: 1.1.14
+        commit: 7e9babdc79d7eeba8ca80e5279b01521135d6396
         x-checker-data:
           type: anitya
           project-id: 11338
