@@ -1,33 +1,21 @@
-From 5a828e61440df48ad4d47e432d64f4bd59b98a34 Mon Sep 17 00:00:00 2001
-From: Sabri Ünal <yakushabb@gmail.com>
-Date: Sat, 2 Nov 2024 18:37:01 +0300
-Subject: [PATCH] Fix appdata papercuts
-
----
- share/solaar/io.github.pwr_solaar.solaar.metainfo.xml | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
-
 diff --git a/share/solaar/io.github.pwr_solaar.solaar.metainfo.xml b/share/solaar/io.github.pwr_solaar.solaar.metainfo.xml
-index a676377..e90cd4c 100644
+index ee2b66d6..eed6904b 100644
 --- a/share/solaar/io.github.pwr_solaar.solaar.metainfo.xml
 +++ b/share/solaar/io.github.pwr_solaar.solaar.metainfo.xml
 @@ -36,13 +36,13 @@
    <launchable type="desktop-id">solaar.desktop</launchable>
    <screenshots>
      <screenshot type="default">
--      <image>https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/docs/Solaar-main-window-button-actions.png</image>
+-      <image>https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/docs/screenshots/Solaar-main-window-button-actions.png</image>
 +      <image>https://i.imgur.com/BWLgWTX.jpeg</image>
      </screenshot>
      <screenshot>
--      <image>https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/docs/Solaar-main-window-receiver.png</image>
+-      <image>https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/docs/screenshots/Solaar-main-window-receiver.png</image>
 +      <image>https://i.imgur.com/KQBTBaX.jpeg</image>
      </screenshot>
      <screenshot>
--      <image>https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/docs/Solaar-menu.png</image>
+-      <image>https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/docs/screenshots/Solaar-menu.png</image>
 +      <image>https://i.imgur.com/6lXJ6rn.jpeg</image>
      </screenshot>
    </screenshots>
  
---
-libgit2 1.7.2
-
