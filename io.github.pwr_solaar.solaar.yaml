@@ -54,7 +54,7 @@ modules:
           type: anitya
           project-id: 11338
           url-template: https://github.com/pwr-Solaar/Solaar/archive/refs/tags/$version.tar.gz
-      # - type: patch
-      #   path: fix-appdata.patch
-      # - type: patch
-      #   path: fix-icon.patch
+      - type: patch
+        path: fix-appdata.patch
+      - type: patch
+        path: fix-icon.patch
