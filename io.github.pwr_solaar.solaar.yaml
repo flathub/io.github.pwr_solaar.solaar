@@ -41,7 +41,7 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 402
-          url-template: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-$version.tar.gz
+          url-template: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-$version.tar.xz
   - name: solaar
     buildsystem: simple
     build-commands:
