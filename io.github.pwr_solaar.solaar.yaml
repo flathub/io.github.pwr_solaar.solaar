@@ -46,6 +46,7 @@ modules:
     buildsystem: simple
     build-commands:
       - python3 setup.py install --prefix=/app --root=/
+      - sed -i 's|^#!python$|#!/usr/bin/python3|' $FLATPAK_DEST/bin/solaar
     sources:
       - type: archive
         url: https://github.com/pwr-Solaar/Solaar/archive/refs/tags/1.1.14.tar.gz
