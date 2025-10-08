@@ -1,6 +1,6 @@
 app-id: io.github.pwr_solaar.solaar
 runtime: org.gnome.Platform
-runtime-version: '48'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 command: solaar
 rename-icon: solaar
@@ -28,7 +28,7 @@ cleanup:
 modules:
   - shared-modules/libayatana-appindicator/libayatana-appindicator-gtk3.json
   # Generated with flatpak-pip-generator, dependencies found in https://github.com/pwr-Solaar/Solaar/blob/d95068c3f5376e37ec8df36c3a460f1698e7855e/setup.py#L71
-  - python3-modules.json
+  - python3-modules.yaml
   
   - name: dbus-python
     buildsystem: autotools
