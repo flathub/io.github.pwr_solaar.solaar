@@ -49,8 +49,8 @@ modules:
       - sed -i 's|^#!python$|#!/usr/bin/python3|' $FLATPAK_DEST/bin/solaar
     sources:
       - type: archive
-        url: https://github.com/pwr-Solaar/Solaar/archive/refs/tags/1.1.14.tar.gz
-        sha256: 8d376a4fe001076a41d3d0bb5f7af079742daf48c37930785a0ecec7da8fbd1f
+        url: https://github.com/pwr-Solaar/Solaar/archive/refs/tags/1.1.15.tar.gz
+        sha256: c438b3bcb12b5007975defebeb5d56efc4aa07bb237ae295eb53f17616855e2c
         x-checker-data:
           type: anitya
           project-id: 11338
