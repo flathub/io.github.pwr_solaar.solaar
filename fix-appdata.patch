@@ -1,21 +1,13 @@
 diff --git a/share/solaar/io.github.pwr_solaar.solaar.metainfo.xml b/share/solaar/io.github.pwr_solaar.solaar.metainfo.xml
-index ee2b66d6..eed6904b 100644
+index aafee362..a3277e07 100644
 --- a/share/solaar/io.github.pwr_solaar.solaar.metainfo.xml
 +++ b/share/solaar/io.github.pwr_solaar.solaar.metainfo.xml
-@@ -36,13 +36,13 @@
-   <launchable type="desktop-id">solaar.desktop</launchable>
-   <screenshots>
-     <screenshot type="default">
--      <image>https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/docs/screenshots/Solaar-main-window-button-actions.png</image>
-+      <image>https://i.imgur.com/BWLgWTX.jpeg</image>
-     </screenshot>
-     <screenshot>
--      <image>https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/docs/screenshots/Solaar-main-window-receiver.png</image>
-+      <image>https://i.imgur.com/KQBTBaX.jpeg</image>
-     </screenshot>
-     <screenshot>
--      <image>https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/docs/screenshots/Solaar-menu.png</image>
-+      <image>https://i.imgur.com/6lXJ6rn.jpeg</image>
-     </screenshot>
+@@ -48,7 +48,7 @@
    </screenshots>
  
+   <releases>
+-    <release version="1.1.16" date="2025-10-23">
++    <release version="1.1.16" date="2025-10-23"/>
+     <release version="1.1.14" date="2025-01-01"/>
+     <release version="1.1.13" date="2024-05-11"/>
+     <release version="1.1.12" date="2024-04-27"/>
