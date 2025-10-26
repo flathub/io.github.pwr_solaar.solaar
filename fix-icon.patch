@@ -1,13 +1,13 @@
 diff --git a/lib/solaar/ui/about/view.py b/lib/solaar/ui/about/view.py
-index 74dc0611..6467cae4 100644
+index 4c0d9084..65f90fe0 100644
 --- a/lib/solaar/ui/about/view.py
 +++ b/lib/solaar/ui/about/view.py
 @@ -34,7 +34,7 @@ class AboutView:
      def init_ui(self) -> None:
          self.view = Gtk.AboutDialog()
          self.view.set_program_name(NAME)
--        self.view.set_icon_name(NAME.lower())
-+        self.view.set_icon_name("io.github.pwr_solaar.solaar")
+-        self.view.set_logo_icon_name(NAME.lower())
++        self.view.set_logo_icon_name("io.github.pwr_solaar.solaar")
          self.view.set_license_type(Gtk.License.GPL_2_0)
  
          self.view.connect(GtkSignal.RESPONSE.value, lambda x, y: self.handle_close(x))
