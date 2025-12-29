@@ -55,13 +55,11 @@ modules:
         done
     sources:
       - type: archive
-        url: https://github.com/pwr-Solaar/Solaar/archive/refs/tags/1.1.16.tar.gz
-        sha256: 224cb48f8370d477e60c96c5c9b6f45cabe9f1655b629af661a0377814f3d703
+        url: https://github.com/pwr-Solaar/Solaar/archive/refs/tags/1.1.18.tar.gz
+        sha256: d14b76a362f2a1e53d9d29c05312ec3bd50ba6852280bd20019a29411b4d4669
         x-checker-data:
           type: anitya
           project-id: 11338
           url-template: https://github.com/pwr-Solaar/Solaar/archive/refs/tags/$version.tar.gz
-      - type: patch
-        path: fix-appdata.patch
       - type: patch
         path: fix-icon.patch
