@@ -29,7 +29,7 @@ modules:
   - shared-modules/libayatana-appindicator/libayatana-appindicator-gtk3.json
   # Generated with flatpak-pip-generator, dependencies found in https://github.com/pwr-Solaar/Solaar/blob/d95068c3f5376e37ec8df36c3a460f1698e7855e/setup.py#L71
   - python3-modules.yaml
-  
+
   - name: dbus-python
     buildsystem: autotools
     cleanup:
@@ -55,8 +55,8 @@ modules:
         done
     sources:
       - type: archive
-        url: https://github.com/pwr-Solaar/Solaar/archive/refs/tags/1.1.18.tar.gz
-        sha256: d14b76a362f2a1e53d9d29c05312ec3bd50ba6852280bd20019a29411b4d4669
+        url: https://github.com/pwr-Solaar/Solaar/archive/refs/tags/1.1.19.tar.gz
+        sha256: 9392a75bfe9faf14f1e9e5c1a29bfef9d5d8552529c870bdd026915f965230f2
         x-checker-data:
           type: anitya
           project-id: 11338
