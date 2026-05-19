@@ -1,3 +1,18 @@
+diff --git a/lib/solaar/gtk.py b/lib/solaar/gtk.py
+--- a/lib/solaar/gtk.py
++++ b/lib/solaar/gtk.py
+@@ -175,6 +175,11 @@
+     gi = _require("gi", "python3-gi (in Ubuntu) or python3-gobject (in Fedora)")
+     _require("gi.repository.Gtk", "gir1.2-gtk-3.0", gi, "Gtk", "3.0")
+
++    flatpak_id = os.environ.get("FLATPAK_ID")
++    if flatpak_id:
++        from gi.repository import GLib
++        GLib.set_prgname(flatpak_id)
++
+     # handle ^C in console
+     signal.signal(signal.SIGINT, signal.SIG_DFL)
+     signal.signal(signal.SIGINT, _handlesig)
 diff --git a/lib/solaar/ui/about/view.py b/lib/solaar/ui/about/view.py
 index 4c0d9084..65f90fe0 100644
 --- a/lib/solaar/ui/about/view.py
