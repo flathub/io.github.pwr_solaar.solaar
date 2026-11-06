@@ -31,7 +31,7 @@ modules:
   - python3-modules.yaml
 
   - name: dbus-python
-    buildsystem: autotools
+    buildsystem: meson
     cleanup:
       - /include
     sources:
@@ -41,7 +41,7 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 402
-          url-template: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-$version.tar.xz
+          url-template: https://dbus.freedesktop.org/releases/dbus-python/dbus_python-$version.tar.gz
   - name: solaar
     buildsystem: simple
     build-commands:
